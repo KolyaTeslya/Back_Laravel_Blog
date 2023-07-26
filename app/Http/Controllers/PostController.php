@@ -51,7 +51,7 @@ class PostController extends Controller
             Post::create([
                 'title' => $request->title,
                 'image' => $imageName,
-                'content' => $request->content
+                'description' => $request->description
             ]);
 
             // Save Image in Storage folder
@@ -121,7 +121,7 @@ class PostController extends Controller
             }
 
             $post->title = $request->title;
-            $post->content = $request->content;
+            $post->description = $request->description;
 
             if($request->image) {
                 // Public storage

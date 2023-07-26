@@ -27,13 +27,13 @@ class PostStoreRequest extends FormRequest
             return [
                 'title' => 'required|string|max:258',
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                'content' => 'required|string'
+                'description' => 'required|string|max:258'
             ];
         } else {
             return [
                 'title' => 'required|string|max:258',
                 'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                'content' => 'required|string'
+                'description' => 'required|string|max:258'
             ];
         }
     }
@@ -44,12 +44,12 @@ class PostStoreRequest extends FormRequest
             return [
                 'title.required' => 'Name is required!',
                 'image.required' => 'Image is required!',
-                'content.required' => 'Descritpion is required!'
+                'description.required' => 'Descritpion is required!'
             ];
         } else {
             return [
                 'title.required' => 'Name is required!',
-                'content.required' => 'Descritpion is required!'
+                'description.required' => 'Descritpion is required!'
             ];
         }
     }
